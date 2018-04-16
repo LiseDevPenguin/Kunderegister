@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.tabControl_ChooseTab = new System.Windows.Forms.TabControl();
             this.AddCustomers = new System.Windows.Forms.TabPage();
             this.tabControl_CustomerType = new System.Windows.Forms.TabControl();
@@ -50,10 +51,14 @@
             this.BusinessAdress = new System.Windows.Forms.Label();
             this.BusinessName = new System.Windows.Forms.Label();
             this.checkbox_delete = new System.Windows.Forms.TabPage();
+            this.checkedListBox_Delete = new System.Windows.Forms.CheckedListBox();
             this.button_DeleteCustomers = new System.Windows.Forms.Button();
             this.ViewCustomers = new System.Windows.Forms.TabPage();
             this.listView_Customer = new System.Windows.Forms.ListView();
-            this.checkedListBox_Delete = new System.Windows.Forms.CheckedListBox();
+            this.postcode = new System.Windows.Forms.Label();
+            this.textBox_Business_Postcode = new System.Windows.Forms.TextBox();
+            this.label_postCode = new System.Windows.Forms.Label();
+            this.textBox_Private_postcode = new System.Windows.Forms.TextBox();
             this.tabControl_ChooseTab.SuspendLayout();
             this.AddCustomers.SuspendLayout();
             this.tabControl_CustomerType.SuspendLayout();
@@ -98,6 +103,9 @@
             // 
             // PrivateCustomer
             // 
+            this.PrivateCustomer.BackColor = System.Drawing.Color.LightBlue;
+            this.PrivateCustomer.Controls.Add(this.textBox_Private_postcode);
+            this.PrivateCustomer.Controls.Add(this.label_postCode);
             this.PrivateCustomer.Controls.Add(this.button_PrivateSave);
             this.PrivateCustomer.Controls.Add(this.textBox_Phone);
             this.PrivateCustomer.Controls.Add(this.textBox_Address);
@@ -113,12 +121,11 @@
             this.PrivateCustomer.Size = new System.Drawing.Size(1066, 449);
             this.PrivateCustomer.TabIndex = 0;
             this.PrivateCustomer.Text = "Private customer";
-            this.PrivateCustomer.UseVisualStyleBackColor = true;
             // 
             // button_PrivateSave
             // 
             this.button_PrivateSave.BackColor = System.Drawing.Color.Green;
-            this.button_PrivateSave.Location = new System.Drawing.Point(86, 266);
+            this.button_PrivateSave.Location = new System.Drawing.Point(84, 295);
             this.button_PrivateSave.Name = "button_PrivateSave";
             this.button_PrivateSave.Size = new System.Drawing.Size(249, 58);
             this.button_PrivateSave.TabIndex = 9;
@@ -128,7 +135,7 @@
             // 
             // textBox_Phone
             // 
-            this.textBox_Phone.Location = new System.Drawing.Point(153, 148);
+            this.textBox_Phone.Location = new System.Drawing.Point(153, 211);
             this.textBox_Phone.Name = "textBox_Phone";
             this.textBox_Phone.Size = new System.Drawing.Size(100, 34);
             this.textBox_Phone.TabIndex = 8;
@@ -144,7 +151,7 @@
             // 
             // textBox_Surname
             // 
-            this.textBox_Surname.Location = new System.Drawing.Point(153, 46);
+            this.textBox_Surname.Location = new System.Drawing.Point(153, 51);
             this.textBox_Surname.Name = "textBox_Surname";
             this.textBox_Surname.Size = new System.Drawing.Size(100, 34);
             this.textBox_Surname.TabIndex = 6;
@@ -161,7 +168,7 @@
             // Phone
             // 
             this.Phone.AutoSize = true;
-            this.Phone.Location = new System.Drawing.Point(3, 151);
+            this.Phone.Location = new System.Drawing.Point(6, 216);
             this.Phone.Name = "Phone";
             this.Phone.Size = new System.Drawing.Size(88, 29);
             this.Phone.TabIndex = 4;
@@ -181,7 +188,7 @@
             // Surname
             // 
             this.Surname.AutoSize = true;
-            this.Surname.Location = new System.Drawing.Point(6, 46);
+            this.Surname.Location = new System.Drawing.Point(3, 51);
             this.Surname.Name = "Surname";
             this.Surname.Size = new System.Drawing.Size(117, 29);
             this.Surname.TabIndex = 2;
@@ -200,6 +207,9 @@
             // 
             // BusinessCustomer
             // 
+            this.BusinessCustomer.BackColor = System.Drawing.Color.LightBlue;
+            this.BusinessCustomer.Controls.Add(this.textBox_Business_Postcode);
+            this.BusinessCustomer.Controls.Add(this.postcode);
             this.BusinessCustomer.Controls.Add(this.button_BusinessSave);
             this.BusinessCustomer.Controls.Add(this.textBox_BusinessPhone);
             this.BusinessCustomer.Controls.Add(this.textBox_BusinessAdress);
@@ -213,12 +223,11 @@
             this.BusinessCustomer.Size = new System.Drawing.Size(1066, 449);
             this.BusinessCustomer.TabIndex = 1;
             this.BusinessCustomer.Text = "Business customer";
-            this.BusinessCustomer.UseVisualStyleBackColor = true;
             // 
             // button_BusinessSave
             // 
             this.button_BusinessSave.BackColor = System.Drawing.Color.ForestGreen;
-            this.button_BusinessSave.Location = new System.Drawing.Point(60, 233);
+            this.button_BusinessSave.Location = new System.Drawing.Point(69, 267);
             this.button_BusinessSave.Name = "button_BusinessSave";
             this.button_BusinessSave.Size = new System.Drawing.Size(265, 57);
             this.button_BusinessSave.TabIndex = 6;
@@ -228,7 +237,7 @@
             // 
             // textBox_BusinessPhone
             // 
-            this.textBox_BusinessPhone.Location = new System.Drawing.Point(168, 113);
+            this.textBox_BusinessPhone.Location = new System.Drawing.Point(168, 162);
             this.textBox_BusinessPhone.Name = "textBox_BusinessPhone";
             this.textBox_BusinessPhone.Size = new System.Drawing.Size(100, 34);
             this.textBox_BusinessPhone.TabIndex = 5;
@@ -253,7 +262,7 @@
             // BusinessPhone
             // 
             this.BusinessPhone.AutoSize = true;
-            this.BusinessPhone.Location = new System.Drawing.Point(6, 113);
+            this.BusinessPhone.Location = new System.Drawing.Point(6, 167);
             this.BusinessPhone.Name = "BusinessPhone";
             this.BusinessPhone.Size = new System.Drawing.Size(88, 29);
             this.BusinessPhone.TabIndex = 2;
@@ -282,6 +291,7 @@
             // 
             // checkbox_delete
             // 
+            this.checkbox_delete.BackColor = System.Drawing.Color.LightBlue;
             this.checkbox_delete.Controls.Add(this.checkedListBox_Delete);
             this.checkbox_delete.Controls.Add(this.button_DeleteCustomers);
             this.checkbox_delete.Location = new System.Drawing.Point(4, 38);
@@ -290,7 +300,15 @@
             this.checkbox_delete.Size = new System.Drawing.Size(1082, 493);
             this.checkbox_delete.TabIndex = 1;
             this.checkbox_delete.Text = "Delete Customers";
-            this.checkbox_delete.UseVisualStyleBackColor = true;
+            // 
+            // checkedListBox_Delete
+            // 
+            this.checkedListBox_Delete.FormattingEnabled = true;
+            this.checkedListBox_Delete.Location = new System.Drawing.Point(21, 15);
+            this.checkedListBox_Delete.Name = "checkedListBox_Delete";
+            this.checkedListBox_Delete.Size = new System.Drawing.Size(305, 265);
+            this.checkedListBox_Delete.TabIndex = 2;
+            this.checkedListBox_Delete.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_Delete_SelectedIndexChanged);
             // 
             // button_DeleteCustomers
             // 
@@ -305,13 +323,13 @@
             // 
             // ViewCustomers
             // 
+            this.ViewCustomers.BackColor = System.Drawing.Color.LightBlue;
             this.ViewCustomers.Controls.Add(this.listView_Customer);
             this.ViewCustomers.Location = new System.Drawing.Point(4, 38);
             this.ViewCustomers.Name = "ViewCustomers";
             this.ViewCustomers.Size = new System.Drawing.Size(1082, 493);
             this.ViewCustomers.TabIndex = 2;
             this.ViewCustomers.Text = "View Customers";
-            this.ViewCustomers.UseVisualStyleBackColor = true;
             // 
             // listView_Customer
             // 
@@ -322,14 +340,40 @@
             this.listView_Customer.UseCompatibleStateImageBehavior = false;
             this.listView_Customer.SelectedIndexChanged += new System.EventHandler(this.listView_Customer_SelectedIndexChanged);
             // 
-            // checkedListBox_Delete
+            // postcode
             // 
-            this.checkedListBox_Delete.FormattingEnabled = true;
-            this.checkedListBox_Delete.Location = new System.Drawing.Point(21, 15);
-            this.checkedListBox_Delete.Name = "checkedListBox_Delete";
-            this.checkedListBox_Delete.Size = new System.Drawing.Size(305, 265);
-            this.checkedListBox_Delete.TabIndex = 2;
-            this.checkedListBox_Delete.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_Delete_SelectedIndexChanged);
+            this.postcode.AutoSize = true;
+            this.postcode.Location = new System.Drawing.Point(3, 110);
+            this.postcode.Name = "postcode";
+            this.postcode.Size = new System.Drawing.Size(123, 29);
+            this.postcode.TabIndex = 7;
+            this.postcode.Text = "Postcode";
+            this.postcode.Click += new System.EventHandler(this.postcode_Click);
+            // 
+            // textBox_Business_Postcode
+            // 
+            this.textBox_Business_Postcode.Location = new System.Drawing.Point(168, 110);
+            this.textBox_Business_Postcode.Name = "textBox_Business_Postcode";
+            this.textBox_Business_Postcode.Size = new System.Drawing.Size(100, 34);
+            this.textBox_Business_Postcode.TabIndex = 8;
+            this.textBox_Business_Postcode.TextChanged += new System.EventHandler(this.textBox_Business_Postcode_TextChanged);
+            // 
+            // label_postCode
+            // 
+            this.label_postCode.AutoSize = true;
+            this.label_postCode.Location = new System.Drawing.Point(3, 158);
+            this.label_postCode.Name = "label_postCode";
+            this.label_postCode.Size = new System.Drawing.Size(123, 29);
+            this.label_postCode.TabIndex = 10;
+            this.label_postCode.Text = "Postcode";
+            // 
+            // textBox_Private_postcode
+            // 
+            this.textBox_Private_postcode.Location = new System.Drawing.Point(153, 155);
+            this.textBox_Private_postcode.Name = "textBox_Private_postcode";
+            this.textBox_Private_postcode.Size = new System.Drawing.Size(100, 34);
+            this.textBox_Private_postcode.TabIndex = 11;
+            this.textBox_Private_postcode.TextChanged += new System.EventHandler(this.textBox_private_postcode_TextChanged);
             // 
             // MainWindow
             // 
@@ -338,8 +382,11 @@
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(1086, 532);
             this.Controls.Add(this.tabControl_ChooseTab);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer Registration";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.tabControl_ChooseTab.ResumeLayout(false);
             this.AddCustomers.ResumeLayout(false);
             this.tabControl_CustomerType.ResumeLayout(false);
@@ -381,6 +428,10 @@
         private System.Windows.Forms.Button button_DeleteCustomers;
         private System.Windows.Forms.ListView listView_Customer;
         private System.Windows.Forms.CheckedListBox checkedListBox_Delete;
+        private System.Windows.Forms.Label postcode;
+        private System.Windows.Forms.TextBox textBox_Business_Postcode;
+        private System.Windows.Forms.Label label_postCode;
+        private System.Windows.Forms.TextBox textBox_Private_postcode;
     }
 }
 
