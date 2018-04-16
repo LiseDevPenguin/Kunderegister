@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kunderegister
 {
+    [Serializable]
     class PrivateCustomer : Customer
     {
         public PrivateCustomer(String firstName, String lastName, String address, String postCode, String phoneNumber) 

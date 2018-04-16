@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kunderegister
 {
+    [Serializable]
     class CustomerRegister
     {
         private List<Customer> customers;
