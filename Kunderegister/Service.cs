@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kunderegister
 {
+    [Serializable]
     class Service
     {
         String Name { get; set; }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kunderegister
 {
+    [Serializable]
     abstract class Customer
     {
         static private Int32 idCounter = 0;

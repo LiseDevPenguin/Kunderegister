@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kunderegister
 {
+    [Serializable]
     class Contact
     {
         public Contact(String firstName, String lastName, String phoneNumber)
