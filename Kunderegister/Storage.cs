@@ -30,9 +30,18 @@ namespace Kunderegister
 
         public T Load()
         {
-            Stream stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
+            Stream stream = new FileStream(filename, FileMode.OpenOrCreate, FileAccess.Read);
 
-            T obj = (T)formatter.Deserialize(stream);
+            T obj;
+
+            try
+            {
+                obj = (T)formatter.Deserialize(stream);
+            }
+            catch (SerializationException ex)
+            {
+                obj = default(T);
+            }
             stream.Close();
 
             return obj;

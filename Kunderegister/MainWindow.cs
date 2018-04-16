@@ -17,6 +17,8 @@ namespace Kunderegister
             InitializeComponent();
         }
 
+        public Action<String, String, String, String, String> OnSavePrivateCustomer { get; set; }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -79,7 +81,7 @@ namespace Kunderegister
 
         private void button_PrivateSave_Click(object sender, EventArgs e)
         {
-
+            OnSavePrivateCustomer?.Invoke(textBox_FirstName.Text, textBox_Surname.Text, textBox_Address.Text, textBox_Private_postcode.Text, textBox_Phone.Text);
         }
 
         private void BusinessName_Click(object sender, EventArgs e)
