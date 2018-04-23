@@ -5,12 +5,12 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kunderegister
+namespace Sysprog
 {
     [Serializable]
     class BusinessCustomer : Customer, ISerializable
     {
-        public BusinessCustomer(String name, String address, String postCode, String phoneNumber, Contact contact) 
+        public BusinessCustomer(String name, String address, String postCode, String phoneNumber, Contact contact = null) 
             :base(name, address, postCode, phoneNumber)
         {
             Contact = contact;

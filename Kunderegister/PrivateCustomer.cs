@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kunderegister
+namespace Sysprog
 {
     [Serializable]
     class PrivateCustomer : Customer, ISerializable

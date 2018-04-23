@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kunderegister
+namespace Sysprog
 {
     static class Program
     {
@@ -15,8 +15,6 @@ namespace Kunderegister
             Storage<CustomerRegister> storage = new Storage<CustomerRegister>(filename);
             CustomerRegister customerRegister = storage.Load() ?? new CustomerRegister();
 
-            Contact test = new Contact("Ole", "Olsen", "123");
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             MainWindow mainWindow = new MainWindow();
@@ -26,7 +24,7 @@ namespace Kunderegister
             };
             mainWindow.OnSaveBusinessCustomer = (String name, String address, String postCode, String phone) =>
             {
-                customerRegister.Add(new BusinessCustomer(name, address, postCode, phone, test));
+                customerRegister.Add(new BusinessCustomer(name, address, postCode, phone));
             };
             mainWindow.PopulateCustomerList = () => 
             {
@@ -42,6 +40,7 @@ namespace Kunderegister
             {
                 customerRegister.Remove(ID);
             };
+
             Application.Run(mainWindow);
 
             storage.Save(customerRegister);

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Kunderegister.Properties
+namespace Sysprog.Properties
 {
 
 

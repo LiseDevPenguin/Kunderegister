@@ -1,4 +1,4 @@
-﻿namespace Kunderegister
+﻿namespace Sysprog
 {
     partial class MainWindow
     {
@@ -100,6 +100,7 @@
             this.columnHeaderAddress,
             this.columnHeaderPostcode,
             this.columnHeaderPhoneNumber});
+            this.listView_Customer.FullRowSelect = true;
             this.listView_Customer.Location = new System.Drawing.Point(8, 3);
             this.listView_Customer.Name = "listView_Customer";
             this.listView_Customer.Size = new System.Drawing.Size(1062, 384);
