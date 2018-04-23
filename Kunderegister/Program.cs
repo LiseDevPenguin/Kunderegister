@@ -15,6 +15,8 @@ namespace Kunderegister
             Storage<CustomerRegister> storage = new Storage<CustomerRegister>(filename);
             CustomerRegister customerRegister = storage.Load() ?? new CustomerRegister();
 
+            Contact test = new Contact("ole", "Olsen", "123");
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             MainWindow mainWindow = new MainWindow();
@@ -22,6 +24,12 @@ namespace Kunderegister
             {
                 customerRegister.Add(new PrivateCustomer(firstName, surname, address, postcode, phone));
             };
+            mainWindow.OnSaveBusinessCustomer = (String name, String address, String postCode, String phone) =>
+            {
+                customerRegister.Add(new BusinessCustomer(name, address, postCode, phone, test));
+  
+            };
+            
             Application.Run(mainWindow);
 
             storage.Save(customerRegister);
