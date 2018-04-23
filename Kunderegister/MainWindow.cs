@@ -19,6 +19,8 @@ namespace Kunderegister
 
         public Action<String, String, String, String, String> OnSavePrivateCustomer { get; set; }
         public Action<String, String, String, String> OnSaveBusinessCustomer { get; set; }
+        public Action<String> OnDeleteCustomer { get; set; }
+        public Func<ICollection<ListViewItem>> PopulateCustomerList { get; set; }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -117,6 +119,16 @@ namespace Kunderegister
         private void button_BusinessSave_Click(object sender, EventArgs e)
         {
             OnSaveBusinessCustomer?.Invoke(textBox_BusinessName.Text, textBox_BusinessAdress.Text, textBox_Business_Postcode.Text, textBox_BusinessPhone.Text);
+        }
+
+        private void tabControl_ChooseTab_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (((TabControl)sender).SelectedIndex == 1 && PopulateCustomerList != null)
+            {
+                listView_Customer.Items.Clear();
+                listView_Customer.Items.AddRange(PopulateCustomerList().ToArray());
+                listView_Customer.Update();
+            }
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)

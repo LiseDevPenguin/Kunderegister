@@ -38,7 +38,7 @@ namespace Kunderegister
             {
                 obj = (T)formatter.Deserialize(stream);
             }
-            catch (SerializationException ex)
+            catch (SerializationException)
             {
                 obj = default(T);
             }
