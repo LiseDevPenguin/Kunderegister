@@ -27,9 +27,21 @@ namespace Kunderegister
             mainWindow.OnSaveBusinessCustomer = (String name, String address, String postCode, String phone) =>
             {
                 customerRegister.Add(new BusinessCustomer(name, address, postCode, phone, test));
-  
             };
-            
+            mainWindow.PopulateCustomerList = () => 
+            {
+                IList<ListViewItem> items = new List<ListViewItem>();
+                foreach (Customer c in customerRegister.Customers)
+                {
+                    String[] row = { c.ID, c.Name, c.Address, c.PostCode, c.PhoneNumber };
+                    items.Add(new ListViewItem(row));
+                }
+                return items;
+            };
+            mainWindow.OnDeleteCustomer = (String ID) =>
+            {
+                customerRegister.Remove(ID);
+            };
             Application.Run(mainWindow);
 
             storage.Save(customerRegister);
