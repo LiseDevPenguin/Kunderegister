@@ -32,6 +32,11 @@
             this.ViewCustomers = new System.Windows.Forms.TabPage();
             this.button_DeleteCustomer = new System.Windows.Forms.Button();
             this.listView_Customer = new System.Windows.Forms.ListView();
+            this.columnHeaderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPostcode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.AddCustomers = new System.Windows.Forms.TabPage();
             this.tabControl_CustomerType = new System.Windows.Forms.TabControl();
             this.PrivateCustomer = new System.Windows.Forms.TabPage();
@@ -57,12 +62,6 @@
             this.BusinessAdress = new System.Windows.Forms.Label();
             this.BusinessName = new System.Windows.Forms.Label();
             this.tabControl_ChooseTab = new System.Windows.Forms.TabControl();
-            this.columnHeaderName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderPostcode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeaderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button_DeleteCustomer = new System.Windows.Forms.Button();
             this.ViewCustomers.SuspendLayout();
             this.AddCustomers.SuspendLayout();
             this.tabControl_CustomerType.SuspendLayout();
@@ -84,7 +83,7 @@
             // 
             // button_DeleteCustomer
             // 
-            this.button_DeleteCustomer.BackColor = System.Drawing.Color.Green;
+            this.button_DeleteCustomer.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.button_DeleteCustomer.Location = new System.Drawing.Point(74, 425);
             this.button_DeleteCustomer.Name = "button_DeleteCustomer";
             this.button_DeleteCustomer.Size = new System.Drawing.Size(211, 43);
@@ -108,6 +107,34 @@
             this.listView_Customer.UseCompatibleStateImageBehavior = false;
             this.listView_Customer.View = System.Windows.Forms.View.Details;
             this.listView_Customer.SelectedIndexChanged += new System.EventHandler(this.listView_Customer_SelectedIndexChanged);
+            // 
+            // columnHeaderID
+            // 
+            this.columnHeaderID.Text = "ID";
+            // 
+            // columnHeaderName
+            // 
+            this.columnHeaderName.Tag = "Name";
+            this.columnHeaderName.Text = "Name";
+            this.columnHeaderName.Width = 198;
+            // 
+            // columnHeaderAddress
+            // 
+            this.columnHeaderAddress.Tag = "Address";
+            this.columnHeaderAddress.Text = "Address";
+            this.columnHeaderAddress.Width = 220;
+            // 
+            // columnHeaderPostcode
+            // 
+            this.columnHeaderPostcode.Tag = "Postcode";
+            this.columnHeaderPostcode.Text = "Postcode";
+            this.columnHeaderPostcode.Width = 202;
+            // 
+            // columnHeaderPhoneNumber
+            // 
+            this.columnHeaderPhoneNumber.Tag = "Phone number";
+            this.columnHeaderPhoneNumber.Text = "Phone number";
+            this.columnHeaderPhoneNumber.Width = 198;
             // 
             // AddCustomers
             // 
@@ -170,7 +197,7 @@
             // 
             // button_PrivateSave
             // 
-            this.button_PrivateSave.BackColor = System.Drawing.Color.Green;
+            this.button_PrivateSave.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.button_PrivateSave.Location = new System.Drawing.Point(84, 295);
             this.button_PrivateSave.Name = "button_PrivateSave";
             this.button_PrivateSave.Size = new System.Drawing.Size(249, 58);
@@ -290,7 +317,7 @@
             // 
             // button_BusinessSave
             // 
-            this.button_BusinessSave.BackColor = System.Drawing.Color.ForestGreen;
+            this.button_BusinessSave.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.button_BusinessSave.Location = new System.Drawing.Point(69, 267);
             this.button_BusinessSave.Name = "button_BusinessSave";
             this.button_BusinessSave.Size = new System.Drawing.Size(265, 57);
@@ -365,39 +392,11 @@
             this.tabControl_ChooseTab.TabIndex = 0;
             this.tabControl_ChooseTab.SelectedIndexChanged += new System.EventHandler(this.tabControl_ChooseTab_SelectedIndexChanged);
             // 
-            // columnHeaderName
-            // 
-            this.columnHeaderName.Tag = "Name";
-            this.columnHeaderName.Text = "Name";
-            this.columnHeaderName.Width = 198;
-            // 
-            // columnHeaderAddress
-            // 
-            this.columnHeaderAddress.Tag = "Address";
-            this.columnHeaderAddress.Text = "Address";
-            this.columnHeaderAddress.Width = 220;
-            // 
-            // columnHeaderPostcode
-            // 
-            this.columnHeaderPostcode.Tag = "Postcode";
-            this.columnHeaderPostcode.Text = "Postcode";
-            this.columnHeaderPostcode.Width = 202;
-            // 
-            // columnHeaderPhoneNumber
-            // 
-            this.columnHeaderPhoneNumber.Tag = "Phone number";
-            this.columnHeaderPhoneNumber.Text = "Phone number";
-            this.columnHeaderPhoneNumber.Width = 198;
-            // 
-            // columnHeaderID
-            // 
-            this.columnHeaderID.Text = "ID";
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Green;
+            this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(1086, 532);
             this.Controls.Add(this.tabControl_ChooseTab);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
