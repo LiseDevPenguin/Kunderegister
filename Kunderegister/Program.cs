@@ -33,12 +33,15 @@ namespace Kunderegister
                 IList<ListViewItem> items = new List<ListViewItem>();
                 foreach (Customer c in customerRegister.Customers)
                 {
-                    String[] row = { c.Name, c.Address, c.PostCode, c.PhoneNumber };
+                    String[] row = { c.ID, c.Name, c.Address, c.PostCode, c.PhoneNumber };
                     items.Add(new ListViewItem(row));
                 }
                 return items;
             };
-
+            mainWindow.OnDeleteCustomer = (String ID) =>
+            {
+                customerRegister.Remove(ID);
+            };
             Application.Run(mainWindow);
 
             storage.Save(customerRegister);

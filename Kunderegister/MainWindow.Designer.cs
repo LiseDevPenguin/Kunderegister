@@ -61,6 +61,7 @@
             this.columnHeaderAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPostcode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ViewCustomers.SuspendLayout();
             this.AddCustomers.SuspendLayout();
             this.tabControl_CustomerType.SuspendLayout();
@@ -89,10 +90,12 @@
             this.button_DeleteCustomer.TabIndex = 1;
             this.button_DeleteCustomer.Text = "Delete customer";
             this.button_DeleteCustomer.UseVisualStyleBackColor = false;
+            this.button_DeleteCustomer.Click += new System.EventHandler(this.button_DeleteCustomer_Click);
             // 
             // listView_Customer
             // 
             this.listView_Customer.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderID,
             this.columnHeaderName,
             this.columnHeaderAddress,
             this.columnHeaderPostcode,
@@ -385,6 +388,10 @@
             this.columnHeaderPhoneNumber.Text = "Phone number";
             this.columnHeaderPhoneNumber.Width = 198;
             // 
+            // columnHeaderID
+            // 
+            this.columnHeaderID.Text = "ID";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -443,6 +450,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderAddress;
         private System.Windows.Forms.ColumnHeader columnHeaderPostcode;
         private System.Windows.Forms.ColumnHeader columnHeaderPhoneNumber;
+        private System.Windows.Forms.ColumnHeader columnHeaderID;
     }
 }
 

@@ -83,7 +83,7 @@ namespace Kunderegister
 
         private void button_PrivateSave_Click(object sender, EventArgs e)
         {
-            OnSavePrivateCustomer?.Invoke(textBox_FirstName.Text, textBox_Surname.Text, textBox_Private_Address.Text, textBox_Private_postcode.Text, textBox_Private_Phone.Text);
+            OnSavePrivateCustomer?.Invoke(textBox_FirstName.Text, textBox_Surname.Text, textBox_Address.Text, textBox_Private_postcode.Text, textBox_Phone.Text);
         }
 
         private void BusinessName_Click(object sender, EventArgs e)
@@ -169,6 +169,12 @@ namespace Kunderegister
         private void MainWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_DeleteCustomer_Click(object sender, EventArgs e)
+        {
+            OnDeleteCustomer?.Invoke(listView_Customer.FocusedItem.SubItems[0].Text);
+            listView_Customer.FocusedItem.Remove();
         }
     }
 }
