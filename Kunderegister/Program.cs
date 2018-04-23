@@ -15,7 +15,7 @@ namespace Kunderegister
             Storage<CustomerRegister> storage = new Storage<CustomerRegister>(filename);
             CustomerRegister customerRegister = storage.Load() ?? new CustomerRegister();
 
-            Contact test = new Contact("ole", "Olsen", "123");
+            Contact test = new Contact("Ole", "Olsen", "123");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
