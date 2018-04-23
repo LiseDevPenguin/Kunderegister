@@ -57,7 +57,6 @@
             this.textBox_Private_postcode = new System.Windows.Forms.TextBox();
             this.tabControl_ChooseTab = new System.Windows.Forms.TabControl();
             this.button_DeleteCustomer = new System.Windows.Forms.Button();
-            this.listView_CustomerDetail = new System.Windows.Forms.ListView();
             this.ViewCustomers.SuspendLayout();
             this.AddCustomers.SuspendLayout();
             this.tabControl_CustomerType.SuspendLayout();
@@ -69,7 +68,6 @@
             // ViewCustomers
             // 
             this.ViewCustomers.BackColor = System.Drawing.Color.LightBlue;
-            this.ViewCustomers.Controls.Add(this.listView_CustomerDetail);
             this.ViewCustomers.Controls.Add(this.button_DeleteCustomer);
             this.ViewCustomers.Controls.Add(this.listView_CustomerGeneral);
             this.ViewCustomers.Location = new System.Drawing.Point(4, 38);
@@ -362,15 +360,6 @@
             this.button_DeleteCustomer.Text = "Delete customer";
             this.button_DeleteCustomer.UseVisualStyleBackColor = false;
             // 
-            // listView_CustomerDetail
-            // 
-            this.listView_CustomerDetail.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.listView_CustomerDetail.Location = new System.Drawing.Point(516, 3);
-            this.listView_CustomerDetail.Name = "listView_CustomerDetail";
-            this.listView_CustomerDetail.Size = new System.Drawing.Size(384, 375);
-            this.listView_CustomerDetail.TabIndex = 2;
-            this.listView_CustomerDetail.UseCompatibleStateImageBehavior = false;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -425,7 +414,6 @@
         private System.Windows.Forms.Label BusinessAdress;
         private System.Windows.Forms.Label BusinessName;
         private System.Windows.Forms.TabControl tabControl_ChooseTab;
-        private System.Windows.Forms.ListView listView_CustomerDetail;
     }
 }
 
