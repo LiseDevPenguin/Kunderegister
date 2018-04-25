@@ -26,6 +26,23 @@ namespace Sysprog
 
         }
 
+        public void ClearPrivateCustomerFields()
+        {
+            textBox_FirstName.Clear();
+            textBox_Surname.Clear();
+            textBox_Address.Clear();
+            textBox_Private_postcode.Clear();
+            textBox_Phone.Clear();
+        }
+
+        public void ClearBusinessCustomerFields()
+        {
+            textBox_BusinessName.Clear();
+            textBox_BusinessAdress.Clear();
+            textBox_Business_Postcode.Clear();
+            textBox_BusinessPhone.Clear();
+        }
+
         private void label1_Click_1(object sender, EventArgs e)
         {
 

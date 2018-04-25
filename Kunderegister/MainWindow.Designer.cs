@@ -62,6 +62,7 @@
             this.BusinessAdress = new System.Windows.Forms.Label();
             this.BusinessName = new System.Windows.Forms.Label();
             this.tabControl_ChooseTab = new System.Windows.Forms.TabControl();
+            this.columnHeaderType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ViewCustomers.SuspendLayout();
             this.AddCustomers.SuspendLayout();
             this.tabControl_CustomerType.SuspendLayout();
@@ -99,7 +100,8 @@
             this.columnHeaderName,
             this.columnHeaderAddress,
             this.columnHeaderPostcode,
-            this.columnHeaderPhoneNumber});
+            this.columnHeaderPhoneNumber,
+            this.columnHeaderType});
             this.listView_Customer.FullRowSelect = true;
             this.listView_Customer.Location = new System.Drawing.Point(8, 3);
             this.listView_Customer.Name = "listView_Customer";
@@ -129,7 +131,7 @@
             // 
             this.columnHeaderPostcode.Tag = "Postcode";
             this.columnHeaderPostcode.Text = "Postcode";
-            this.columnHeaderPostcode.Width = 202;
+            this.columnHeaderPostcode.Width = 125;
             // 
             // columnHeaderPhoneNumber
             // 
@@ -183,8 +185,8 @@
             // 
             this.textBox_Private_postcode.Location = new System.Drawing.Point(153, 155);
             this.textBox_Private_postcode.Name = "textBox_Private_postcode";
-            this.textBox_Private_postcode.Size = new System.Drawing.Size(100, 34);
-            this.textBox_Private_postcode.TabIndex = 11;
+            this.textBox_Private_postcode.Size = new System.Drawing.Size(284, 34);
+            this.textBox_Private_postcode.TabIndex = 4;
             this.textBox_Private_postcode.TextChanged += new System.EventHandler(this.textBox_private_postcode_TextChanged);
             // 
             // label_postCode
@@ -202,7 +204,7 @@
             this.button_PrivateSave.Location = new System.Drawing.Point(84, 295);
             this.button_PrivateSave.Name = "button_PrivateSave";
             this.button_PrivateSave.Size = new System.Drawing.Size(249, 58);
-            this.button_PrivateSave.TabIndex = 9;
+            this.button_PrivateSave.TabIndex = 6;
             this.button_PrivateSave.Text = "Save Customer";
             this.button_PrivateSave.UseVisualStyleBackColor = false;
             this.button_PrivateSave.Click += new System.EventHandler(this.button_PrivateSave_Click);
@@ -211,32 +213,32 @@
             // 
             this.textBox_Phone.Location = new System.Drawing.Point(153, 211);
             this.textBox_Phone.Name = "textBox_Phone";
-            this.textBox_Phone.Size = new System.Drawing.Size(100, 34);
-            this.textBox_Phone.TabIndex = 8;
+            this.textBox_Phone.Size = new System.Drawing.Size(284, 34);
+            this.textBox_Phone.TabIndex = 5;
             this.textBox_Phone.TextChanged += new System.EventHandler(this.textBox_Phone_TextChanged);
             // 
             // textBox_Address
             // 
             this.textBox_Address.Location = new System.Drawing.Point(153, 103);
             this.textBox_Address.Name = "textBox_Address";
-            this.textBox_Address.Size = new System.Drawing.Size(100, 34);
-            this.textBox_Address.TabIndex = 7;
+            this.textBox_Address.Size = new System.Drawing.Size(284, 34);
+            this.textBox_Address.TabIndex = 3;
             this.textBox_Address.TextChanged += new System.EventHandler(this.textBox_Address_TextChanged);
             // 
             // textBox_Surname
             // 
             this.textBox_Surname.Location = new System.Drawing.Point(153, 51);
             this.textBox_Surname.Name = "textBox_Surname";
-            this.textBox_Surname.Size = new System.Drawing.Size(100, 34);
-            this.textBox_Surname.TabIndex = 6;
+            this.textBox_Surname.Size = new System.Drawing.Size(284, 34);
+            this.textBox_Surname.TabIndex = 2;
             this.textBox_Surname.TextChanged += new System.EventHandler(this.textBox_Surname_TextChanged);
             // 
             // textBox_FirstName
             // 
             this.textBox_FirstName.Location = new System.Drawing.Point(153, 3);
             this.textBox_FirstName.Name = "textBox_FirstName";
-            this.textBox_FirstName.Size = new System.Drawing.Size(100, 34);
-            this.textBox_FirstName.TabIndex = 5;
+            this.textBox_FirstName.Size = new System.Drawing.Size(284, 34);
+            this.textBox_FirstName.TabIndex = 1;
             this.textBox_FirstName.TextChanged += new System.EventHandler(this.textBox_FirstName_TextChanged);
             // 
             // Phone
@@ -302,8 +304,8 @@
             // 
             this.textBox_Business_Postcode.Location = new System.Drawing.Point(168, 110);
             this.textBox_Business_Postcode.Name = "textBox_Business_Postcode";
-            this.textBox_Business_Postcode.Size = new System.Drawing.Size(100, 34);
-            this.textBox_Business_Postcode.TabIndex = 8;
+            this.textBox_Business_Postcode.Size = new System.Drawing.Size(270, 34);
+            this.textBox_Business_Postcode.TabIndex = 3;
             this.textBox_Business_Postcode.TextChanged += new System.EventHandler(this.textBox_Business_Postcode_TextChanged);
             // 
             // postcode
@@ -322,7 +324,7 @@
             this.button_BusinessSave.Location = new System.Drawing.Point(69, 267);
             this.button_BusinessSave.Name = "button_BusinessSave";
             this.button_BusinessSave.Size = new System.Drawing.Size(265, 57);
-            this.button_BusinessSave.TabIndex = 6;
+            this.button_BusinessSave.TabIndex = 5;
             this.button_BusinessSave.Text = "Save Customer";
             this.button_BusinessSave.UseVisualStyleBackColor = false;
             this.button_BusinessSave.Click += new System.EventHandler(this.button_BusinessSave_Click);
@@ -331,24 +333,24 @@
             // 
             this.textBox_BusinessPhone.Location = new System.Drawing.Point(168, 162);
             this.textBox_BusinessPhone.Name = "textBox_BusinessPhone";
-            this.textBox_BusinessPhone.Size = new System.Drawing.Size(100, 34);
-            this.textBox_BusinessPhone.TabIndex = 5;
+            this.textBox_BusinessPhone.Size = new System.Drawing.Size(270, 34);
+            this.textBox_BusinessPhone.TabIndex = 4;
             this.textBox_BusinessPhone.TextChanged += new System.EventHandler(this.textBox_BusinessPhone_TextChanged);
             // 
             // textBox_BusinessAdress
             // 
             this.textBox_BusinessAdress.Location = new System.Drawing.Point(168, 57);
             this.textBox_BusinessAdress.Name = "textBox_BusinessAdress";
-            this.textBox_BusinessAdress.Size = new System.Drawing.Size(100, 34);
-            this.textBox_BusinessAdress.TabIndex = 4;
+            this.textBox_BusinessAdress.Size = new System.Drawing.Size(270, 34);
+            this.textBox_BusinessAdress.TabIndex = 2;
             this.textBox_BusinessAdress.TextChanged += new System.EventHandler(this.textBox_BusinessAdress_TextChanged);
             // 
             // textBox_BusinessName
             // 
             this.textBox_BusinessName.Location = new System.Drawing.Point(168, 9);
             this.textBox_BusinessName.Name = "textBox_BusinessName";
-            this.textBox_BusinessName.Size = new System.Drawing.Size(100, 34);
-            this.textBox_BusinessName.TabIndex = 3;
+            this.textBox_BusinessName.Size = new System.Drawing.Size(270, 34);
+            this.textBox_BusinessName.TabIndex = 1;
             this.textBox_BusinessName.TextChanged += new System.EventHandler(this.textBox_BusinessName_TextChanged);
             // 
             // BusinessPhone
@@ -392,6 +394,12 @@
             this.tabControl_ChooseTab.Size = new System.Drawing.Size(1090, 535);
             this.tabControl_ChooseTab.TabIndex = 0;
             this.tabControl_ChooseTab.SelectedIndexChanged += new System.EventHandler(this.tabControl_ChooseTab_SelectedIndexChanged);
+            // 
+            // columnHeaderType
+            // 
+            this.columnHeaderType.Tag = "Type";
+            this.columnHeaderType.Text = "Type";
+            this.columnHeaderType.Width = 154;
             // 
             // MainWindow
             // 
@@ -452,6 +460,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderPostcode;
         private System.Windows.Forms.ColumnHeader columnHeaderPhoneNumber;
         private System.Windows.Forms.ColumnHeader columnHeaderID;
+        private System.Windows.Forms.ColumnHeader columnHeaderType;
     }
 }
 
